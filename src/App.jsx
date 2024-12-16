@@ -6,6 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { MovieContextProvider } from "./contexts/MovieContext";
 //component
 import SearchBar from "./components/SearchBar";
+import MoviesList from "./components/moviesList";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -13,6 +14,7 @@ function App() {
   return (
     <MovieContextProvider>
       <SearchBar></SearchBar>
+      <MoviesList></MoviesList>
     </MovieContextProvider>
   );
 }
