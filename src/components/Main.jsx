@@ -16,6 +16,7 @@ export default function Main() {
               title={movie.title}
               originalTitle={movie.original_title}
               vote={movie.vote_average}
+              language={flags}
             />
           );
         })}
@@ -29,6 +30,7 @@ export default function Main() {
               title={serie.name}
               originalTitle={serie.original_name}
               vote={serie.vote_average}
+              language={flags}
               //img={poster_path}
             />
           );
