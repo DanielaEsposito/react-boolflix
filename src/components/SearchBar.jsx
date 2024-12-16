@@ -2,13 +2,14 @@ import { useState } from "react";
 import { useMovies } from "../contexts/MovieContext";
 export default function SearchBar() {
   const [query, setQuery] = useState("");
-  const { fetchMovies } = useMovies();
+  const { fetchMovies, fetchSeries } = useMovies();
   const handleInputChange = (e) => {
     setQuery(e.target.value);
     console.log(e.target.value);
   };
   const handleSearch = () => {
     fetchMovies(query);
+    fetchSeries(query);
   };
   return (
     <nav className="navbar bg-body-tertiary">
