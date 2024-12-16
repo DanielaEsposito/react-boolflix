@@ -1,6 +1,7 @@
 import { useState } from "react";
-import "./App.css";
+
 //bootstrap
+
 import "bootstrap/dist/css/bootstrap.min.css";
 //context
 import { MovieContextProvider } from "./contexts/MovieContext";
@@ -12,8 +13,10 @@ import Main from "./components/Main";
 function App() {
   return (
     <MovieContextProvider>
-      <Header></Header>
-      <Main></Main>
+      <div className="wrapper">
+        <Header></Header>
+        <Main></Main>
+      </div>
     </MovieContextProvider>
   );
 }

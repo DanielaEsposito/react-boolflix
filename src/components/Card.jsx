@@ -12,23 +12,26 @@ export default function Card({ title, originalTitle, language, vote, img }) {
     language = "fr.svg";
   }
   return (
-    <ul>
-      <li>
-        <strong>Titolo:</strong>
-        {title}
-      </li>
-      <li>
-        <strong>Titolo in lingua originale:</strong>
-        {originalTitle}
-      </li>
-      <li>
-        <strong>Lingua:</strong>
-        <img src={language} alt="" className="img-flag" />
-      </li>
-      <li>
-        <strong>Voto:</strong>
-        {vote}
-      </li>
-    </ul>
+    <div className="card-post d-flex col">
+      <img src={img} alt="" className="img-fluid" />
+      <div className="card-description w-100 ">
+        <p>
+          <strong>Titolo:</strong>
+          {title}
+        </p>
+        <p>
+          <strong>Titolo Originale:</strong>
+          {originalTitle}
+        </p>
+        <p>
+          <strong>voto:</strong>
+          {vote}
+        </p>
+        <p>
+          <strong>Lingua:</strong>
+          {language}
+        </p>
+      </div>
+    </div>
   );
 }

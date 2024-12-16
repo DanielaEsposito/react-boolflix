@@ -12,9 +12,9 @@ export default function SearchBar() {
     fetchSeries(query);
   };
   return (
-    <nav className="navbar bg-body-tertiary">
+    <nav className="navbar bg-body-tertiary" data-bs-theme="dark">
       <div className="container-fluid">
-        <a className="navbar-brand">Boolfix</a>
+        <h1 className="title fw-bold text-danger">BOOLFIX</h1>
         <div className="d-flex" role="search">
           <input
             className="form-control me-2"
