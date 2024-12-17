@@ -4,6 +4,9 @@ import { useMovies } from "../contexts/MovieContext";
 export default function Main() {
   const { movies, series } = useMovies();
   const imgUrl = "https://image.tmdb.org/t/p/";
+  if (movies.length === 0) {
+    return <h2 className="m-5">Nessun film selezionato.</h2>;
+  }
   return (
     <main className="page-main">
       <section id="movies-list">
