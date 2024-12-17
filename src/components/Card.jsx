@@ -1,9 +1,15 @@
 export default function Card({ title, originalTitle, language, vote, img }) {
   const normalizedVote = Math.ceil(vote / 2);
-  const stars = (num) => {
+
+  const stars = (num, num2) => {
+    const regularStar = num2 - num;
+
     const numberStars = [];
     for (let i = 0; i < num; i++) {
       numberStars.push(<i class="fa-solid fa-star fa-xs"></i>);
+    }
+    for (let i = 0; i < regularStar; i++) {
+      numberStars.push(<i class="fa-regular fa-star fa-xs"></i>);
     }
     return numberStars;
   };
@@ -36,7 +42,7 @@ export default function Card({ title, originalTitle, language, vote, img }) {
         </p>
         <p>
           <strong>voto:</strong>
-          {stars(normalizedVote)}
+          {stars(normalizedVote, 5)}
         </p>
         <p>
           <strong>Lingua:</strong>
