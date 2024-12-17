@@ -3,7 +3,7 @@ import { useMovies } from "../contexts/MovieContext";
 
 export default function Main() {
   const { movies, series } = useMovies();
-  const imgUrl = import.meta.env.VITE_API_IMG_URL;
+  const imgUrl = "https://image.tmdb.org/t/p/";
   return (
     <main className="page-main">
       <section id="movies-list">
@@ -39,7 +39,7 @@ export default function Main() {
             {series.map((serie) => {
               const image = serie.poster_path
                 ? `${imgUrl}w342${serie.poster_path}`
-                : "defaultImg.jpeg";
+                : "defaultImg.jpg";
               return (
                 <Card
                   key={serie.id}

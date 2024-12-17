@@ -6,10 +6,10 @@ export default function Card({ title, originalTitle, language, vote, img }) {
 
     const numberStars = [];
     for (let i = 0; i < num; i++) {
-      numberStars.push(<i class="fa-solid fa-star fa-xs"></i>);
+      numberStars.push(<i className="fa-solid fa-star fa-xs"></i>);
     }
     for (let i = 0; i < regularStar; i++) {
-      numberStars.push(<i class="fa-regular fa-star fa-xs"></i>);
+      numberStars.push(<i className="fa-regular fa-star fa-xs"></i>);
     }
     return numberStars;
   };

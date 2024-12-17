@@ -5,9 +5,10 @@ const MovieContext = createContext();
 //esporto il provider
 export const MovieContextProvider = ({ children }) => {
   //IMPORT URL
-  const apiKey = import.meta.env.VITE_API_KEY;
-  const apiMoviesUrl = import.meta.env.VITE_API_MOVIES_URL;
-  const apiSeriesUrl = import.meta.env.VITE_API_SERIES_URL;
+  const apiKey =
+    "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiY2ZlYjM5OTI3OTFlYzU5MzllMTkwMTRlYzhmOTEyNCIsIm5iZiI6MTczNDM0Mjg0My44NjQsInN1YiI6IjY3NWZmOGJiYWFkZTMyNTliOTI5NjEwOCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.CctF0XC3j_ywHQoGAFLZ_gVb3G7XgkXoH_CCboJ6d8Q";
+  const apiMoviesUrl = "https://api.themoviedb.org/3/search/movie";
+  const apiSeriesUrl = "https://api.themoviedb.org/3/search/tv";
 
   const [movies, setMovies] = useState([]);
   const [series, setSeries] = useState([]);
