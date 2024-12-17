@@ -43,6 +43,7 @@ export const MovieContextProvider = ({ children }) => {
         console.log(data.results);
       });
   };
+
   return (
     <MovieContext.Provider value={{ movies, series, fetchSeries, fetchMovies }}>
       {children}

@@ -1,4 +1,12 @@
 export default function Card({ title, originalTitle, language, vote, img }) {
+  const normalizedVote = Math.ceil(vote / 2);
+  const stars = (num) => {
+    const numberStars = [];
+    for (let i = 0; i < num; i++) {
+      numberStars.push(<i class="fa-solid fa-star fa-xs"></i>);
+    }
+    return numberStars;
+  };
   if (language === "en") {
     language = "gb.svg";
   }
@@ -28,7 +36,7 @@ export default function Card({ title, originalTitle, language, vote, img }) {
         </p>
         <p>
           <strong>voto:</strong>
-          {Math.ceil(vote)}
+          {stars(normalizedVote)}
         </p>
         <p>
           <strong>Lingua:</strong>

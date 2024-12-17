@@ -9,7 +9,7 @@ export default function Main() {
       <section id="movies-list">
         <div className="container">
           <h1>Movies</h1>
-          <div className="row row-cols-4 g-5">
+          <div className="row row-cols-4 g-4">
             {movies.map((movie) => {
               const image = movie.poster_path
                 ? `${imgUrl}w342${movie.poster_path}`
@@ -32,7 +32,7 @@ export default function Main() {
         <div className="container">
           <h1>Series</h1>
 
-          <div className="row row-cols-4 g-5">
+          <div className="row row-cols-4 g-4">
             {series.map((serie) => {
               const image = serie.poster_path
                 ? `${imgUrl}w342${serie.poster_path}`
