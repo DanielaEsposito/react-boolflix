@@ -8,12 +8,15 @@ export default function Main() {
     <main className="page-main">
       <section id="movies-list">
         <div className="container">
-          <h1>Movies</h1>
-          <div className="row row-cols-4 g-4">
+          <h1 className="my-4">Movies</h1>
+          <div
+            className="row d-flex justify-content-center
+           row-cols-4 g-4"
+          >
             {movies.map((movie) => {
               const image = movie.poster_path
                 ? `${imgUrl}w342${movie.poster_path}`
-                : "defaultImg.jpeg";
+                : "defaultImg.jpg";
               return (
                 <Card
                   key={movie.id}
@@ -30,9 +33,9 @@ export default function Main() {
       </section>
       <section id="series-list">
         <div className="container">
-          <h1>Series</h1>
+          <h1 className="my-4">Series</h1>
 
-          <div className="row row-cols-4 g-4">
+          <div className="row d-flex justify-content-center row-cols-4 g-4">
             {series.map((serie) => {
               const image = serie.poster_path
                 ? `${imgUrl}w342${serie.poster_path}`

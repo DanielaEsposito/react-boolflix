@@ -26,28 +26,30 @@ export default function Card({ title, originalTitle, language, vote, img }) {
     language = "fr.svg";
   }
   return (
-    <div className="card-post d-flex col">
-      <img src={img} alt="" className="img-fluid" />
-      {/*ipoteticamnete dovresti avere due componenti, uno per l'hover e uno per il poster 
+    <div className="d-flex justify-content-center col">
+      <div className="card-post">
+        <img src={img} alt="" className="img-fluid h-100" />
+        {/*ipoteticamnete dovresti avere due componenti, uno per l'hover e uno per il poster 
       quindi dividi e ricevi i dati da due chiamate fetch diverse una che riceve solo il poster
       laltra che riceve solo i dati...onMouseOver */}
-      <div className="card-description w-100 ">
-        <p>
-          <strong>Titolo:</strong>
-          {title}
-        </p>
-        <p>
-          <strong>Titolo Originale:</strong>
-          {originalTitle}
-        </p>
-        <p>
-          <strong>voto:</strong>
-          {stars(normalizedVote, 5)}
-        </p>
-        <p>
-          <strong>Lingua:</strong>
-          <img src={language} alt="" className="img-flag" />
-        </p>
+        <div className="card-description w-100 ">
+          <p>
+            <strong>Titolo:</strong>
+            {title}
+          </p>
+          <p>
+            <strong>Titolo Originale:</strong>
+            {originalTitle}
+          </p>
+          <p>
+            <strong>voto:</strong>
+            {stars(normalizedVote, 5)}
+          </p>
+          <p>
+            <strong>Lingua:</strong>
+            <img src={language} alt="" className="img-flag" />
+          </p>
+        </div>
       </div>
     </div>
   );

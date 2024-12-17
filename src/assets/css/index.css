@@ -20,12 +20,13 @@
 }
 .card-post {
   overflow: hidden;
-
+  width: 300px;
   position: relative;
 }
 .card-description {
+  overflow: hidden;
   opacity: 0;
-  transition: opacity 0.3s 500ms;
+  transition: opacity 0.2s 500ms;
   background-color: rgba(0, 0, 0, 0.904);
   position: absolute;
   top: 0px;
