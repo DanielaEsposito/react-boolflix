@@ -16,6 +16,13 @@ export default function SearchBar() {
       <div className="container-fluid">
         <h1 className="title fw-bold text-danger">BOOLFIX</h1>
         <div className="d-flex" role="search">
+          <select name="" id="" className="me-3">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
           <input
             className="form-control me-2"
             type="text"

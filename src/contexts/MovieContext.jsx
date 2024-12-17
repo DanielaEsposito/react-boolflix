@@ -12,6 +12,8 @@ export const MovieContextProvider = ({ children }) => {
   const [movies, setMovies] = useState([]);
   const [series, setSeries] = useState([]);
   //chiamata fetch per i film
+
+  //! prova a mappare i dati e a ricevere solo il poster
   const fetchMovies = (query) => {
     fetch(`${apiMoviesUrl}?query=${query}`, {
       method: "GET",

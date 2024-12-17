@@ -14,6 +14,9 @@ export default function Card({ title, originalTitle, language, vote, img }) {
   return (
     <div className="card-post d-flex col">
       <img src={img} alt="" className="img-fluid" />
+      {/*ipoteticamnete dovresti avere due componenti, uno per l'hover e uno per il poster 
+      quindi dividi e ricevi i dati da due chiamate fetch diverse una che riceve solo il poster
+      laltra che riceve solo i dati...onMouseOver */}
       <div className="card-description w-100 ">
         <p>
           <strong>Titolo:</strong>
@@ -25,11 +28,11 @@ export default function Card({ title, originalTitle, language, vote, img }) {
         </p>
         <p>
           <strong>voto:</strong>
-          {vote}
+          {Math.ceil(vote)}
         </p>
         <p>
           <strong>Lingua:</strong>
-          {language}
+          <img src={language} alt="" className="img-flag" />
         </p>
       </div>
     </div>

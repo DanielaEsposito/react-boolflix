@@ -9,8 +9,11 @@ export default function Main() {
       <section id="movies-list">
         <div className="container">
           <h1>Movies</h1>
-          <div className="row row-cols-4 g-4">
+          <div className="row row-cols-4 g-5">
             {movies.map((movie) => {
+              const image = movie.poster_path
+                ? `${imgUrl}w342${movie.poster_path}`
+                : "defaultImg.jpeg";
               return (
                 <Card
                   key={movie.id}
@@ -18,7 +21,7 @@ export default function Main() {
                   originalTitle={movie.original_title}
                   vote={movie.vote_average}
                   language={movie.original_language}
-                  img={`${imgUrl}w342${movie.poster_path}`}
+                  img={image}
                 />
               );
             })}
@@ -29,8 +32,11 @@ export default function Main() {
         <div className="container">
           <h1>Series</h1>
 
-          <div className="row row-cols-4 g-4">
+          <div className="row row-cols-4 g-5">
             {series.map((serie) => {
+              const image = serie.poster_path
+                ? `${imgUrl}w342${serie.poster_path}`
+                : "defaultImg.jpeg";
               return (
                 <Card
                   key={serie.id}
@@ -38,7 +44,7 @@ export default function Main() {
                   originalTitle={serie.original_name}
                   vote={serie.vote_average}
                   language={serie.original_language}
-                  img={`${imgUrl}w342${serie.poster_path}`}
+                  img={image}
                 />
               );
             })}
